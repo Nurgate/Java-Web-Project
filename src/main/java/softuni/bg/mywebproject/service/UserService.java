@@ -6,5 +6,5 @@ import java.util.List;
 import java.util.Set;
 
 public interface UserService {
-    List<User> getUser();
+    List<User> getUsers();
 }
