@@ -15,4 +15,14 @@ public class IndexController {
     public String resume() {
         return "resume";
     }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
+
+    @GetMapping("/projects")
+    public String projects() {
+        return "projects";
+    }
 }
