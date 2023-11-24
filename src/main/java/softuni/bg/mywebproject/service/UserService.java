@@ -7,4 +7,8 @@ import java.util.Set;
 
 public interface UserService {
     List<User> getUsers();
+
+    boolean isUniqueUsername(String value);
+
+    boolean isUniqueEmail(String value);
 }
