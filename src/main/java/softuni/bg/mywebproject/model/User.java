@@ -28,7 +28,6 @@ public class User {
     private String username;
 
     @Column(name = "gender")
-    @Enumerated(EnumType.STRING)
     private String gender;
 
     @Column(name = "email", unique = true)

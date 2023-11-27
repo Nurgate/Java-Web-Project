@@ -10,6 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 import softuni.bg.mywebproject.validation.annotations.PasswordMatch;
 import softuni.bg.mywebproject.validation.annotations.UniqueEmail;
+import softuni.bg.mywebproject.validation.annotations.UniqueUsername;
 
 @PasswordMatch
 @Getter
