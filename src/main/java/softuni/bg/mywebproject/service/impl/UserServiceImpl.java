@@ -1,9 +1,10 @@
-package softuni.bg.mywebproject.service;
+package softuni.bg.mywebproject.service.impl;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import softuni.bg.mywebproject.model.User;
 import softuni.bg.mywebproject.repository.UserRepository;
+import softuni.bg.mywebproject.service.UserService;
 import softuni.bg.mywebproject.service.session.LoggedUser;
 
 import java.util.List;

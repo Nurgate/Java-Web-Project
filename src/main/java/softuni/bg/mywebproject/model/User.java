@@ -41,5 +41,11 @@ public class User {
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id"))
+
     private Set<Role> role;
+
+    public User setRoles(Set<Role> roles) {
+        this.role = roles;
+        return this;
+    }
 }
