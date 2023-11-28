@@ -48,4 +48,8 @@ public class User {
         this.role = roles;
         return this;
     }
+
+    public Set<Role> getRoles() {
+        return role;
+    }
 }

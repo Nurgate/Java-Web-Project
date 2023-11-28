@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -19,7 +20,7 @@
   <link href="/css/register.css" rel="stylesheet"/>
 </head>
 <body>
-<div th:replace="~{fragments/navigation}"></div>
+  <div th:replace="~{fragments/navigation}"></div>
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row justify-content-center align-items-center h-100">
@@ -27,22 +28,31 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-            <form>
+            <form
+                    th:action="@{/users/register}"
+                    th:method="POST"
+                    th:object="${userRegisterBindingModel}">
 
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" />
-                    <label class="form-label" for="firstName">First Name</label>
+                    <input type="text"
+                           id="firstName"
+                           class="form-control form-control-lg"
+                           th:field="*{firstName}"/>
+                    <label th:class="form-label" th:for="firstName">First Name</label>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" />
-                    <label class="form-label" for="lastName">Last Name</label>
+                    <input type="text"
+                           id="lastName"
+                           class="form-control form-control-lg"
+                           th:field="*{lastName}"/>
+                    <label th:class="form-label" th:for="lastName">Last Name</label>
                   </div>
 
                 </div>
@@ -52,8 +62,11 @@
                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                   <div class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Username</label>
+                    <input type="text"
+                           class="form-control form-control-lg"
+                           id="birthdayDate"
+                           th:field="*{username}"/>
+                    <label th:for="birthdayDate" th:class="form-label">Username</label>
                   </div>
 
                 </div>
@@ -62,15 +75,23 @@
                   <h6 class="mb-2 pb-1">Gender: </h6>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                           value="option1" checked />
-                    <label class="form-check-label" for="femaleGender">Female</label>
+                    <input class="form-check-input"
+                           th:field="*{gender}"
+                           type="radio"
+                           name="inlineRadioOptions"
+                           id="femaleGender"
+                           value="Female" />
+                    <label th:class="form-check-label" th:for="femaleGender">Female</label>
                   </div>
 
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                           value="option2" />
-                    <label class="form-check-label" for="maleGender">Male</label>
+                    <input class="form-check-input"
+                           th:field="*{gender}"
+                           type="radio"
+                           name="inlineRadioOptions"
+                           id="maleGender"
+                           value="Male"/>
+                    <label th:class="form-check-label" th:for="maleGender">Male</label>
                   </div>
 
 <!--                  <div class="form-check form-check-inline">-->
@@ -86,16 +107,22 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                    <label class="form-label" for="emailAddress">Email</label>
+                    <input th:field="*{email}"
+                           type="email"
+                           id="emailAddress"
+                           class="form-control form-control-lg"/>
+                    <label th:class="form-label" th:for="emailAddress">Email</label>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="tel" id="password" class="form-control form-control-lg" />
-                    <label class="form-label" for="password">Password</label>
+                    <input type="tel"
+                           id="password"
+                           class="form-control form-control-lg"
+                           th:field="*{password}"/>
+                    <label th:class="form-label" th:for="password">Password</label>
                   </div>
 
                 </div>
@@ -103,7 +130,6 @@
 
               <div class="row">
                 <div class="col-12">
-
 <!--                  <select class="select form-control-lg">-->
 <!--                    <option value="1" disabled>Choose option</option>-->
 <!--                    <option value="2">Subject 1</option>-->
@@ -111,7 +137,6 @@
 <!--                    <option value="4">Subject 3</option>-->
 <!--                  </select>-->
 <!--                  <label class="form-label select-label">Choose option</label>-->
-
                 </div>
               </div>
 

@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import softuni.bg.mywebproject.exeptions.LoginCredentialsException;
-import softuni.bg.mywebproject.model.Role;
 import softuni.bg.mywebproject.model.User;
 import softuni.bg.mywebproject.model.dto.binding.UserRegisterBindingModel;
 import softuni.bg.mywebproject.repository.UserRepository;
@@ -48,7 +47,6 @@ public class AppConfig {
 
         return modelMapper;
     }
-
 
 
 

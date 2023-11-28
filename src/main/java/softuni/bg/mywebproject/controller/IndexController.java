@@ -21,18 +21,23 @@ public class IndexController {
         return "projects";
     }
 
-    @GetMapping("/login")
-    public String login() {
-        return "login";
-    }
+//    @GetMapping("/login")
+//    public String login() {
+//        return "login";
+//    }
 
-    @GetMapping("/register")
-    public String register() {
-        return "register";
-    }
+//    @GetMapping("/register")
+//    public String register() {
+//        return "register";
+//    }
 
     @GetMapping("/contact")
     public String contact() {
         return "contact";
     }
+
+//    @PostMapping("/logout")
+//    public ModelAndView logout() {
+//        return new ModelAndView("redirect:/");
+//    }
 }

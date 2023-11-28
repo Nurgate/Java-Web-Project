@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -30,8 +31,10 @@
                 <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/resume}">Resume</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/projects}">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/users/login}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/contact}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link"></a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
             </ul>
         </div>
     </div>
